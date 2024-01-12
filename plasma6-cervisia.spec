@@ -1,9 +1,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	CVS frontend for KDE
 Name:		plasma6-cervisia
-Version:	24.01.85
+Version:	24.01.90
 Release:	1
-Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
@@ -15,15 +14,12 @@ BuildRequires:	pkgconfig(Qt6DBus)
 BuildRequires:	cmake(KF6Parts)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6DBusAddons)
-BuildRequires:	cmake(KF6Init)
 BuildRequires:	cmake(KF6IconThemes)
 BuildRequires:	cmake(KF6Notifications)
 BuildRequires:	cmake(KF6WidgetsAddons)
 BuildRequires:	cmake(KF6ItemViews)
 BuildRequires:	cmake(KF6Su)
 Requires:	cvs
-Conflicts:	kdesdk4-core < 1:4.11.0
-Conflicts:	kdesdk4-devel < 1:4.11.0
 
 %description
 CVS frontend for KDE.
@@ -52,8 +48,9 @@ CVS frontend for KDE.
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n cervisia-%{version}
 %cmake \
+	-DQT_MAJOR_VERSION=6 \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
 
