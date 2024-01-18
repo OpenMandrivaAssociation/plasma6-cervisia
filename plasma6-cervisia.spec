@@ -11,6 +11,9 @@ BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt6Core)
 BuildRequires:	pkgconfig(Qt6Widgets)
 BuildRequires:	pkgconfig(Qt6DBus)
+BuildRequires:  cmake(Qt6Qml)
+BuildRequires:  cmake(Qt6QmlCore)
+BuildRequires:  cmake(Qt6QmlNetwork)
 BuildRequires:	cmake(KF6Parts)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6DBusAddons)
@@ -18,7 +21,9 @@ BuildRequires:	cmake(KF6IconThemes)
 BuildRequires:	cmake(KF6Notifications)
 BuildRequires:	cmake(KF6WidgetsAddons)
 BuildRequires:	cmake(KF6ItemViews)
+BuildRequires:	cmake(KF6TextWidgets)
 BuildRequires:	cmake(KF6Su)
+BuildRequires:  qt6-qtbase-theme-gtk3
 Requires:	cvs
 
 %description
