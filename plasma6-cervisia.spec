@@ -5,7 +5,7 @@ Version:	24.01.90
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
-Url:		http://www.kde.org
+Url:		https://www.kde.org
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/cervisia-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt6Core)
